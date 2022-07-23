@@ -1,8 +1,9 @@
 from dbt.adapters.sql import SQLAdapter
+from dbt.adapters.bigquery import BigQueryAdapter
 from dbt.adapters.devnull import DevNullConnectionManager
 from dbt.adapters.base.relation import BaseRelation
 
-class DevNullAdapter(SQLAdapter):
+class DevNullAdapter(BigQueryAdapter):
     ConnectionManager = DevNullConnectionManager
 
     @classmethod
